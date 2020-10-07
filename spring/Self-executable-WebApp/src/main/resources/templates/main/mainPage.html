@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>MedApp</title>
+</head>
+<body>
+<div>
+    <p></p>
+    <p>Witaj na stronie głównej MedApp
+    </p>
+</div>
+<p>Wybierz czynność którą chcesz wykonać</p>
+<a th:href="@{/disease/createmed}">Dodaj lek do bazy danych</a><br/><br/>
+<a th:href="@{/disease/parametrize}">Wyszukaj leku dla pacjenta</a><br/>
+<a th:href="@{/dose/dosetoexisting}">Dodaj nowe dawkowanie do istniejącego leku</a><br/>
+<a th:href="@{/disease/showall}">Pokaż wszystkie leki</a><br/>
+
+</body>
+</html>

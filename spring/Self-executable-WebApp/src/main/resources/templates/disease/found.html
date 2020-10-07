@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>MedApp</title>
+</head>
+<tbody>
+<div th:if="${medicines.empty}"><p>Lista lekarstw jest pusta</p></div>
+
+<table>
+    <span th:each="medicine : ${medicines}">
+       <p>
+           <font size="5">Nazwa leku:<span style="font-weight: bold" th:text="${medicine.name}">teamname</span></font>
+       </p>
+       <p>
+            <font size="5">Nazwa substancji czynnej:
+            <span style="font-weight: bold" th:text="${medicine.activeSubstance}">activeSubstance</span></font>
+       </p>
+        <p>Dawki:</p>
+        <span th:each="meddodse : ${medicine.doses}">
+            <p>Wiek pacjenta:
+             <span style="font-weight: bold" th:text="${meddodse.lowerParameterBound}">lowerBound</span> -
+                <span style="font-weight: bold" th:text="${meddodse.upperParameterBound}">upperBound</span>
+                <span style="font-weight: bold" th:text="${meddodse.parameterType}">parameter</span><br>
+                <span style="font-weight: bold" th:text="${meddodse.dailyFrequency}">doseFrequency</span> x
+                <span style="font-weight: bold" th:text="${meddodse.singleDose}">singleDose</span>
+                <span style="font-weight: bold" th:text="${meddodse.doseType}">doseType</span></font>
+            </p>
+        </span>
+        <br><br>
+       ---------------------------------------------------------------------------------------
+    </span>
+</table>
+
+</tbody>
+<a th:href="@{/main/mainPage}">Strona główna</a><br/>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>MedApp</title>
+</head>
+<body>
+<center>
+    <p>Dostępne leki:</p>
+
+    <div th:if="${meds.empty}"><p>Lista jest pusta</p></div>
+
+    <form action="#" th:action="@{/dose/selectmedfordose}" method="post">
+        <div class="col-lg-3" th:object="${sourceText}">
+            <select class="form-control" id="sourceText" name="sourceText">     <!-- zmienić na th:field -->
+                <option value="">Wybierz lek</option>
+                <option th:each="test : ${meds}"
+                        th:value="${test.name}"
+                        th:text="${test.name}"></option>
+            </select>
+        </div>
+        <p><input type="submit" value="Zatwierdź"></p>
+    </form>
+</center>
+
+</body>
+</html>

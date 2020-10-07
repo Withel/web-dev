@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>MedApp</title>
+</head>
+<body>
+<div>
+    Witaj w systemie systemie leczenia pacjentów. Wprowadź dane dotyczące nowego leku
+    <form action="#" th:action="@{/disease/createmed}" th:object="${addMed}"method="post">
+        <p>Nazwa: <label>
+            <input type="text" th:field="${addMed.name}">
+        </label></p>
+
+        <p>Substancja czynna: <label>
+            <input type="text" th:field="${addMed.activeSubstance}">
+        </label></p>
+
+        <p>Zastosowanie(wyłączone): <label>
+            <input type="text">
+        </label></p>
+
+        Zastosowanie(aktywne):
+        <select value="suchy" th:field="${addMed.description}">       <!-- PRZETESTUJ TO!!!!!!!!!!!!!! -->
+            <option value="suchy">kaszel suchy</option>
+            <option value="mokry">kaszel mokry</option>
+            <option value="gorączka">gorączka</option>
+            <option value="biegunka/zaparcie">biegunka/zaparcie</option>
+        </select>
+
+
+        <p><input type="submit" value="Zatwierdź"></p>
+    </form>
+
+</div>
+</body>
+</html>

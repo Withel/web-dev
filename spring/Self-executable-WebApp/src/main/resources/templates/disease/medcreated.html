@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pl" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>MedApp</title>
+</head>
+<body>
+<div>
+    <p></p>
+    <p>Skutecznie dodałeś lek do bazy danych:
+    <div th:text="${addedMed.name}">medicineName</div>
+    </p>
+</div>
+<a th:href="@{/main/mainPage}">Strona główna</a><br/>
+</body>
+</html>

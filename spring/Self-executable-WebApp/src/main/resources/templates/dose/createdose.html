@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>MedApp</title>
+</head>
+<body>
+
+<form action="#" th:action="@{/dose/createdose}" th:object="${dose}" method="post">
+
+    <p>Nazwa leku : <input th:field="${dose.diseaseName}" readonly/></p>
+
+    <p>Dolna granica przedziału parametru decyzyjnego: <label>
+        <input type="number" th:field="${dose.lowerParameterBound}">
+    </label></p>
+
+    <p>Rodzaj parametru decyzycjnego: <label>
+        <select value="miesiace" th:field="${dose.parameterType}">
+            <option value="miesiace">miesiace</option>
+            <option value="lata">lata</option>
+            <option value="kilogramy">kilogramy</option>
+        </select>
+    </label></p>
+
+    <p>Górna granica przedziału parametru decyzycjnego: <label>
+        <input type="number" th:field="${dose.upperParameterBound}">
+    </label></p>
+
+    <p>Pojedyncza dawka: <label>
+        <input type="number" step="0.01" th:field="${dose.singleDose}">
+    </label></p>
+
+    <p>Ilosc dawkowania dziennie: <label>
+        <input type="number" th:field="${dose.dailyFrequency}">
+    </label></p>
+
+    <p>Rodzaj dawki (tabletka,maść...): <label>
+        <input type="text" th:field="${dose.doseType}">
+    </label></p>
+    <p><input type="submit" value="Zatwierdź"></p>
+</form>
+
+</body>
+</html>
