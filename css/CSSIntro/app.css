@@ -1,0 +1,47 @@
+/*background can be an image*/
+/*order of properties matters*/
+
+body {
+	background: pink;
+
+/*	background: url(https://imgprod65.hobbylobby.com/3/c1/f8/3c1f8f79826e7b349d7e7ae09f86682eaf7bac2a/350Wx350H-617126-1018.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;*/
+}	
+
+/*border has three different parts:
+width
+color
+style*/
+
+h1	{
+	color: #3d0069;
+	border-color: purple;
+	border-width: 5px;
+	border-style: solid;
+}
+
+/*we can also set border properties in one line like this*/
+
+li {
+	color: green;
+	border: 2px dashed black;
+}
+
+h4 {
+	color: purple;
+	background: rgb(255, 100, 000);
+	text-align: center;
+}
+
+h3 {
+	color: rgb(20, 77, 123);
+}
+
+h2 {
+	color: rgb(0,0,255, 1);
+}
+
+h5 {
+	color: rgb(0,0,255, .5);
+}

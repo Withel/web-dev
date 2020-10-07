@@ -1,0 +1,13 @@
+guru:
+  jms:
+    username: JMS Username
+    password: somepass
+    url: SomeUrl
+
+---
+#its an file separator, so basically you can have multiple files in one file (LMAO)
+spring:
+  profiles: de
+guru:
+  jms:
+    username: JMS Username $$$$$$$ German

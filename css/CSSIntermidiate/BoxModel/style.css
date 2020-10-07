@@ -1,0 +1,26 @@
+p {
+
+/*Content - Width and Height*/
+
+/*we can also use % which is % value of parent*/
+width: 50%;
+/*height: 300px;*/
+
+/*Border*/
+
+border: 2px solid blue;
+
+/*Padding - space between element and border*/
+
+padding: 10px;
+padding-left: 40px;
+/*padding: 50px 50px 50px 50px;*/
+/*Margin - space outside the bordres, between elements*/
+margin-top: 200px;
+
+/*just like with borders we can write margin in one line*/
+/*its top->right->bottom->left*/
+/*margin: 20px 40px 500px 100px;*/
+margin: 0 auto 0 auto;
+/*margin: 50, auto;*/
+}

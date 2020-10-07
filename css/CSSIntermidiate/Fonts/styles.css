@@ -1,0 +1,59 @@
+/*font-family*/
+/*we can also put name of font inside quotes
+sometimes we have to*/
+
+p{
+	font-family: Raleway;
+}
+
+h1 {
+	font-family: Raleway; 
+}
+
+/*font-size*/
+
+body {
+	font-size: 10px;
+}
+
+h1{
+	font-size: 5.0em;
+}
+
+p {
+	font-size: 2.0em;
+}
+
+/*doubles the size of a parent font*/
+span {
+	font-size: 2.0em;
+}
+
+/*font-weight*/
+/*some fonts can use numeric number 100-800 but can be only divided by 100*/
+p {
+	font-weight: normal;
+}
+
+/*line-height*/
+/*its basically spacing between lines*/
+p{
+	line-height: 1.5;
+}
+
+/*text-align*/
+/*controls how the text is aligned*/
+
+h1 {
+	text-align: center;
+}
+
+/*text-decoration*/
+
+p {
+	text-decoration: underline;
+}
+
+h1 {
+	text-decoration: line-through;
+}

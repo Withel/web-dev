@@ -1,0 +1,11 @@
+li {
+	border: 2px solid red;
+}
+
+#ass{
+	background: grey;
+}
+
+.completed {
+	text-decoration: line-through;
+}

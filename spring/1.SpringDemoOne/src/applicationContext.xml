@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- load the properties file: sport.properties -->
+    <context:property-placeholder location="classpath:sport.properties"/>
+
+    <!--I have my beans here so, the id is like an alias. Simply the id that your-->
+    <!--Java application will use when they wanna retrieve a bean from Spring Container-->
+    <!--and class is fully qualified name of the java class-->
+
+    <!--define the dependency-->
+    <bean id="myFortuneService"
+          class="com.thewithel.HappyFortuneService">
+
+    </bean>
+
+
+    <!-- Its gonna create our coach object call the constructot
+         and its gonna pass in for that fortune reference myFortune
+         which is effectively HappyFortuneService. -->
+    <bean id="myCoach"
+          class="com.thewithel.TrackCoach">
+
+        <!-- set up constructor injection -->
+        <constructor-arg ref="myFortuneService"/>
+    </bean>
+
+    <bean id="myCricketCoach"
+          class="com.thewithel.CricketCoach">
+
+        <!-- set up setter injection -->
+        <property name="fortuneService"
+                  ref="myFortuneService"/>
+
+        <!-- inject literal values -->
+        <property name="emailAddress" value="thebestcoach@luv2code.com" />
+        <property name="team" value="Sunrisers Hyderabad"/>
+
+    </bean>
+
+    <bean id="mySecondCricketCoach"
+          class="com.thewithel.CricketCoach">
+
+        <property name="fortuneService"
+                  ref="myFortuneService"/>
+        <property name="emailAddress" value="${foo.email}"/>
+        <property name="team" value="${foo.team}"/>
+
+    </bean>
+</beans>

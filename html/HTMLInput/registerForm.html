@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register form!</title>
+</head>
+<body>
+
+<form>
+	<p>
+		<label for="firstName">First Name:</label>
+		<input id="firstName" type="text" placeholder="John" name="first">
+
+		<label for="secondName">Second Name:</label>
+		<input id="secondName" type="text" name="last">		
+	</p>
+
+	<p>
+		<label for="male">Male </label>
+		<input name="genderChoice" id="male" type="radio" name=""
+		value="MALE">
+
+		<label for="female">Female </label>
+		<input name="genderChoice" id="female" type="radio" name=""
+		value="FEMALE">
+
+		<label for="other">Other </label>
+		<input name="genderChoice" id="other" type="radio" name=""
+		value="OTHER">
+	</p>
+
+	<p>
+		<label for="email">Email: </label>
+		<input id="email" type="email" name="email" placeholder="Your email"
+		required>
+
+		<!-- we can also use "pattern" and title attribute -->
+		<label for="passowrd">Password: </label>
+		<input id="passowrd" type="password" placeholder="passowrd" name="password"
+		required maxlength="10" minlength="5">
+	</p>
+
+	<p>
+		<label for="date">Birthday: </label>
+		<input id="date" type="date" name="date">
+	</p>
+
+	<p>
+		<label for="date2">Birthday Selector: 
+			<select name="month">
+				<option>Jan</option>
+				<option>Feb</option>
+				<option>Mar</option>
+			</select>
+
+			<select name="day">
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+			</select>
+
+			<select name="year">
+				<option>1998</option>
+				<option>1999</option>
+				<option>2000</option>
+			</select>
+		</label>
+	</p>
+
+	<p>
+		<label for="agreement">I agree to the terms and conditions</label>
+		<input id="agreement" type="checkbox" name="agree" value="TRUE">
+	</p>
+
+	<button>Submit</button>
+</form>
+
+</body>
+</html>
